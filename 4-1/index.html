@@ -1,1 +1,495 @@
-<!-- ここに記載 -->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>ページタイトル</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <body> 
+            <header class="site-header">
+                <div class="container header-inner">
+                    <a class="logo" href="/" aria-label="ホームへ">SampleBrand</a>
+                    <nav id="grobal-nav" class="grobal-nav" aria-label="グローバルナビゲーション">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="#features">特徴</a>
+                            </li>
+                            <li>
+                                <a href="#logos">導入企業</a>
+                            </li>
+                            <li>
+                                <a href="#how">使い方</a>
+                            </li>
+                            <li>
+                                <a href="#cases">事例</a>
+                            </li>
+                            <li>
+                                <a href="#pricing">料金</a>
+                            </li>
+                            <li>
+                                <a href="#faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#blog">お知らせ</a>
+                            </li>
+                            <li>
+                                <a href="#contact">アクセス</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="hamburger" type="button" aria-label="メニューを開く" aria-controls="grobal-nav" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </header>
+                <main>
+                    <section class="hero" aria-label="メインメインビジュアル">
+                        <div class="hero-overlay"></div>
+                        <div class="container hero-contact">
+                            <h1 class="hero-title">あなたの価値を、正しく美しく伝える。</h1>
+                            <p class="hero_text">わかりやすさ・拡張性を兼ね備えた、モバイルファーストな土台づくり。</p>
+                            <div class="hero_buttons">
+                                <a href="#" class="btn btn--primary">今すぐ相談する</a>
+                                <a href="#" class="btn btn--secondary">できることを見る</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="logos" class="section logos">
+                        <div class="container">
+                            <h2 class="section-title">多くの企業に選ばれています</h2>
+                            <ul class="logos-grid" aria-label="導入企業ロゴ一覧">
+                                <li>
+                                    <img class="logo-items" src="img/logo-1.png" alt="ロゴ1" width="120" height="40">
+                                </li>
+                                <li>
+                                    <img  class="logo-items" src="img/logo-2.png" alt="ロゴ2" width="120" height="40">
+                                </li>
+                                <li> 
+                                    <img  class="logo-items" src="img/logo-3.png" alt="ロゴ3" width="120" height="40">
+                                </li>
+                                <li>
+                                    <img  class="logo-items" src="img/logo-4.png" alt="ロゴ4" width="120" height="40">
+                                </li>
+                                <li>
+                                    <img  class="logo-items" src="img/logo-5.png" alt="ロゴ5" width="120" height="40">
+                                </li>
+                                <li>
+                                    <img  class="logo-items" src="img/logo-6.png" alt="ロゴ6" width="120" height="40">
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="features" class="section features">
+                        <div class="container">
+                            <h2 class="section-title">特徴</h2>
+                            <div class="features-grid">
+                                <article class="feature-card">
+                                    <img class="card-icon" src="img/feat-1.png" alt="軽快な表示のアイコン">
+                                    <h3 class="card-title">軽快な表示</h3>
+                                    <p class=card-text"">無駄を避け、情報を最短距離で届ける設計。初回表示から軽やかに。</p>
+                                </article>
+                                <article class="feature-card">
+                                    <img class="card-icon" src="img/feat-2.png" alt="直感的なUIのアイコン">
+                                    <h3 class="card-title">直感的UI</h3>
+                                    <p class="card-text">余白・階層・タイポを揃え、理解のスピードと使いやすさを高めます。</p>
+                                </article>
+                                <article class="feature-card">
+                                    <img class="card-icon" src="img/feat-3.png" alt="拡張しやすい土台のアイコン">
+                                    <h3 class="card-title">拡張しやすい土台</h3>
+                                    <p class="card-text">セマンティックHTMLとCSS変数で、後工程の変更にも強い構造を。</p>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section reasons">
+                        <div class="container">
+                            <h2 class="section-title">選ばれる理由</h2>
+                            <ul class="reasons-list">
+                                <li class="point">
+                                    <img  class="point-icon" src="img/icon-circle.svg">
+                                    <div class="point-body">
+                                        <h3 class="point-title">運用しやすい情報設計</h3>
+                                        <p class="point-text">更新頻度の高い領域を特定し、影響範囲を最小化。現場で回る設計です。</p>
+                                    </div>
+                                </li>
+                                <li class="point">
+                                    <img  class="point-icon" src="img/icon-circle.svg">
+                                    <div class="point-body">
+                                        <h3 class="point-title">読みやすいタイポグラフィ</h3>
+                                        <p class="point-text">流体タイポと相対余白で、どの画面幅でも視線誘導が途切れません。</p>
+                                    </div>
+                                </li>
+                                <li class="point">
+                                    <img  class="point-icon" src="img/icon-circle.svg">
+                                    <div class="point-body">
+                                        <h3 class="point-title">アクセシブルな配慮</h3>
+                                        <p class="point-text">わかりやすいラベルと十分なコントラストで、より多くの人に伝わります。</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="detail">
+                        <div class="container">
+                            <div class="detail-item">
+                                <div class="detail-image">
+                                    <img src="img/detail-1.png" alt="素早い検証のイメージ" />
+                                </div>
+                                <div class="detail-text">
+                                    <h2>素早い検証で学習を最短化</h2>
+                                    <p>小さく作って素早く試す。画面幅が変わっても破綻しない設計で改善を加速。</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-image">
+                                    <img src="img/detail-2.png" alt="意味論と可読性のイメージ" />
+                                </div>
+                                <div class="detail-text">
+                                    <h2>意味論と可読性の両立</h2>
+                                    <p>見出し階層とランドマークを整え、検索・読み上げ・保守の全方位でメリット。</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-image">
+                                    <img src="img/detail-3.png" alt="デザイントークンのイメージ" />
+                                </div>
+                                <div class="detail-text">
+                                    <h2>デザイントークンで一貫性</h2>
+                                    <p>色・余白・フォントサイズを変数化。全体のトーンを保ったまま微調整が可能。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section  id="how" class="section how">
+                        <div class="container">
+                            <h2 class="section-title">使い方（3ステップ）</h2>
+                            <ol class="how-steps">
+                                <li class="how-step">
+                                    <div class="how-badge">1</div>
+                                    <h3 class="how-title">トライアル開始</h3>
+                                    <p class="how-text">メールだけで数分、すぐに試せます。</p>
+                                </li>
+                                <li class="how-step">
+                                    <div class="how-badge">2</div>
+                                    <h3 class="how-title">テンプレート選択</h3>
+                                    <p class="how-text">目的に合う構成を選び、画像と文を差し替え。</p>
+                                </li>
+                                <li class="how-step">
+                                    <div class="how-badge">3</div>
+                                    <h3 class="how-title">公開と改善</h3>
+                                    <p class="how-text">フィードバックで素早く磨き、成果につなげます。</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="section metrics">
+                        <div class="container">
+                            <ul class="metrics-grid" aria-label="主要指標">
+                                <li class="metric">
+                                    <strong class="metric-value">38%</strong>
+                                    <span class="metric-label">CVR向上</span>
+                                </li>
+                                <li class="metric">
+                                    <strong class="metric-value">2.1s</strong>
+                                    <span class="metric-label">初回表示</span>
+                                </li>
+                                <li class="metric">
+                                    <strong class="metric-value">-42%</strong>
+                                    <span class="metric-label">離脱率低下</span>
+                                </li>
+                                <li class="metric">
+                                    <strong class="metric-value">99.9%</strong>
+                                    <span class="metric-label">稼働率</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="section roadmaps">
+                        <div class="container">
+                            <h2 class="roadmaps-title">ロードマップ</h2>
+                            <ol class="roadmaps-list" aria-label="進行ステップ">
+                                <li class="roadmap-card">
+                                    <div class="tl-node" aria-label="true"></div>
+                                    <div class="content">
+                                        <h3>Week 1-2：要件整理</h3>
+                                        <p>目的・KPI・制約を定義し、最小価値を特定します。</p>
+                                    </div>
+                                </li>
+                                <li class="roadmap-card">
+                                    <div class="tl-node" aria-label="true"></div>
+                                    <div class="content">
+                                        <h3>Week 3-4：MVP制作</h3>
+                                        <p>最小構成で動くものを作り、仮説検証を回します。</p>
+                                    </div>
+                                </li>
+                                <li class="roadmap-card">
+                                    <div class="tl-node" aria-label="true"></div>
+                                    <div class="content">
+                                        <h3>Week 5-6：改善&拡張</h3>
+                                        <p>データをもとにUI・導線・コピーを磨き込みます。</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section  id="cases" class="section cases">
+                        <div class="container">
+                            <h2 class="introductions-title">導入事例</h2>
+                            <ul class="introductions-list">
+                                <li class="introduction">
+                                    <div class="introduction-image">
+                                        <img src="img/case-1.png" alt="回遊性の改善のイメージ">
+                                    </div>
+                                    <div class="introduction-card"> 
+                                        <span class="introduction-tag">Retail</span>
+                                        <h3>回遊性の改善で向上売上</h3>
+                                        <p>導線とサーチ体験を見直し、ECの売上を押し上げました。</p>
+                                    </div>
+                                </li>
+                                <li class="introduction">
+                                    <div class="introduction-image">
+                                        <img src="img/case-2.png" alt="有料化率のイメージ">
+                                    </div>
+                                    <div class="introduction-card">
+                                        <span class="introduction-tag">SaaS</span>
+                                        <h3>有料化率が +22%</h3>
+                                        <p>オンボーディング摩擦を削減し、コンバージョンを改善</p>
+                                    </div>
+                                </li>
+                                <li class="introduction">
+                                    <div class="introduction-image">
+                                        <img src="img/case-3.png" alt="継続率のイメージ">
+                                    </div>
+                                    <div class="introduction-card">
+                                        <span class="introduction-tag">Education</span>
+                                        <h3>継続率を大幅に改善</h3>
+                                        <p>学習導線の最適化で離脱を抑制しました。</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="ui-demo" class="section ui-demo">
+                        <div class="container">
+                            <h2 class="section-title">UIデモ</h2>
+                            <div class="ui-demo-list">
+                                <h3 class="ui-title">モーダルウィンドウ</h3>
+                                <p class="ui-desc">「モーダルを開く」を押すとオーバーレイ付きモーダルを表示（まだ動作しなくてよい）。</p>
+                                <button class="btn btn-outline" type="button" id="open-modal" aria-controls="demo-modal" aria-expanded="false"> モーダルを開く </button>
+                                <div class="modal" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+                                    <div class="modal-overlay" data-close="true"></div>
+                                    <div class="modal-dialog" role="document">
+                                        <button class="modal-close" type="button" aria-label="閉じる" data-close="true"> × </button>
+                                        <h3 class="modal-title" id="modal-title">モーダルの見出し</h3>
+                                        <div class="modal-content">
+                                            <p>ここにモーダルの本文が入ります。背景スクロールはJSで制御予定です。</p>
+                                        </div>
+                                        <div class="modal-actions">
+                                            <button class="btn btn-primary" type="button">OK</button>
+                                            <button class="btn btn-outline" type="button" data-close="true"> 閉じる </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block tabs" id="demo-tabs">
+                                <h3 class="ui-title">タブ切替コンポーネント</h3>
+                                <div class="tabs-nav" role="tablist">
+                                    <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-tab="tab-1"> 概要 </button>
+                                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="tab-2"> 仕様 </button>
+                                    <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="tab-3"> 注意点 </button>
+                                </div>
+                                <div class="ui-panels">
+                                    <div class="tab-panel is-active" id="tab-1" role="tabpanel">
+                                    <p>タブUIの静的な雛形です。（まだ動作しなくてよい）</p>
+                                </div>
+                                <div class="tab-panel" id="tab-2" role="tabpanel">
+                                    <ul>
+                                        <li>
+                                            "タブボタンには"
+                                            <code>data-tab</code>
+                                            "属性を付与"
+                                        </li>
+                                        <li>表示/非表示はクラス操作のみ</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-panel" id="tab-3" role="tabpanel">
+                                    <p>キーボード操作やフォーカス管理は後続の実装で対応予定です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section testimonials">
+                        <div class="container">
+                            <h2 class="voices-title">お客様の声</h2>
+                            <div class="testi-rail" aria-label="お客様の声">
+                                <figure class="quote">
+                                    <img class="quote-avatar" src="img/user-1.png" alt="田中様">
+                                    <blockquote class="quote-text">導入から運用までスムーズ。学習コストが低く、社内の納得感も高いです。</blockquote>
+                                    <figcaption class="quote-cite">田中 一郎/株式会社AAA</figcaption>
+                                </figure>
+                                <figure class="quote">
+                                    <img class="quote-avatar" src="img/user-2.png" alt="佐藤様">
+                                    <blockquote class="quote-text">初速がとにかく速い。検証ループが早まり、改善が捗ります。</blockquote>
+                                    <figcaption class="quote-cite">佐藤 花子/株式会社BBB</figcaption>
+                                </figure>
+                                <figure class="quote">
+                                    <img class="quote-avatar" src="img/user-3.png" alt="鈴木様">
+                                    <blockquote class="quote-text">UIの一貫性が保ちやすく、チームの共通言語ができました。</blockquote>
+                                    <figcaption class="quote-cite">鈴木 次郎/株式会社CCC</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="pricing" class="section pricing">
+                        <div class="container">
+                            <h2 class="section-title">料金</h2>
+                            <ul class="pricing-grid" aria-label="料金プラン">
+                                <li class="pricing-card">
+                                    <h3 class="price-title">Basic</h3>
+                                    <p class="price-value">
+                                        ¥0
+                                        <span>/月</span>
+                                    </p>
+                                    <ul class="price-list">
+                                        <li>基本テンプレート</li>
+                                        <li>メールサポート</li>
+                                        <li>学習リソース</li>
+                                    </ul>
+                                    <a class="btn btn-outline" href="#contact">始める</a>
+                                </li>
+                                <li class="pricing-card is-recommended">
+                                    <h3 class="price-title">Pro</h3>
+                                    <p class="price-value">
+                                        ¥3,980
+                                        <span>/月</span>
+                                    </p>
+                                    <ul class="price-list">
+                                        <li>全テンプレート</li>
+                                        <li>優先サポート</li>
+                                        <li>拡張拡張コンポネート</li>
+                                    </ul>
+                                    <a class="btn btn-primary" href="#contact">申し込む</a>
+                                </li>
+                                <li class="pricing-card">
+                                    <h3 class="price-title">Enterprise</h3>
+                                    <p class="price-value">お見積り</p>
+                                    <ul class="price-list">
+                                        <li>カスタム要件対応</li>
+                                        <li>SLA & 専任サポート</li>
+                                        <li>セキュリティ監査</li>
+                                    </ul>
+                                    <a class="btn btn-outline" href="#contact">相談する</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="faq" class="section faq">
+                        <div class="container">
+                            <h2 class="section-title">よくある質問</h2>
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <h3 class="faq-question">無料プランでも商用利用できますか？</h3>
+                                    <hr class="faq-divider">
+                                    <div class="faq-answer">
+                                        <p>可能です。ただしサポート範囲や提供テンプレートに制限があります。</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <h3 class="faq-question">解約はいつでもできますか？</h3>
+                                    <hr class="faq-divider">
+                                    <div class="faq-answer">
+                                        <p>はい。次回請求日までの解約で、以降の請求は発生しません。</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <h3 class="faq-question">セキュリティや監査対応は？</h3>
+                                    <hr class="faq-divider">
+                                    <div class="faq-answer">
+                                        <p>
+                                            Enterprise プランで個別要件に対応します。まずはご相談ください。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="blog" class="section blog">
+                        <div class="container">
+                            <h2 class="section-title">お知らせ</h2>
+                            <ul class="post-list">
+                                <li class="post-row">
+                                    <img class="post-thumb" src="img/post-1.png" alt="プロダクトアップデート" width="160" height="100">
+                                    <div class="post-body">
+                                        <time class="post-date" datetime="2025-07-01">2025-07-01</time>
+                                        <h3 class="post-title">
+                                            <a href="#">新テンプレートを追加しました</a>
+                                        </h3>
+                                        <p class="post-text">教育・医療向けのレイアウトを拡充し、立ち上げを加速します。</p>
+                                    </div>
+                                </li>
+                                <li class="post-row">
+                                    <img class="post-thumb" src="img/post-2.png" alt="導入事例インタビュー" width="160" height="100">
+                                    <div class="post-body">
+                                        <time class="post-date" datetime="2025-06-18">2025-06-18</time>
+                                        <h3 class="post-title">
+                                            <a href="#">導入事例インタビュー公開</a>
+                                        </h3>
+                                        <p class="post-text">改善施策と数値を実例とともにご紹介します。</p>
+                                    </div>
+                                </li>
+                                <li class="post-row">
+                                    <img class="post-thumb" src="img/post-3.png" alt="イベント登壇" width="160" height="100">
+                                    <div class="post-body">
+                                        <time class="post-date" datetime="2025-06-01">2025-06-01</time>
+                                        <h3 class="post-title">
+                                            <a href="#">業界カンファレンスに登壇しました</a>
+                                        </h3>
+                                        <p class="post-text">最新潮流と運用知見を共有しました。</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="contact" class="section access">
+                        <div class="container">
+                            <h2 class="section-title">アクセス・お問い合わせ</h2>
+                            <div class="access-grid">
+                                <address class="access-info">
+                                    <p>〒100-0000 東京都千代田区サンプル 1-2-3</p>
+                                    <p>営業時間：平日 10:00–18:00</p>
+                                    <p>メール：info@example.com</p>
+                                </address>
+                                <div class="access-map">
+                                    <img src="img/map.png" alt="本社所在地の地図" width="640" height="420">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <footer class="site-footer">
+                    <div class="container footer-inner">
+                        <small class="copyright">© 2025 SampleBrand</small>
+                        <ul class="sns-list" aria-label="SNS">
+                            <li>
+                                <a class="sns-link" href="#" aria-label="X（Twitter）">
+                                    <img class="sns-icon" src="img/icon-x.svg" alt width="22" height="22" aria-hidden="true">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sns-link" href="#" aria-label="Facebook">
+                                    <img class="sns-icon" src="img/icon-facebook.svg" alt width="22" height="22" aria-hidden="true">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sns-link" href="#" aria-label="Instagram">
+                                    <img class="sns-icon" src="img/icon-instagram.svg" alt width="22" height="22" aria-hidden="true">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+        </body>
+</html>
