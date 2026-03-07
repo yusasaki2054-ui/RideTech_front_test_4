@@ -11,7 +11,16 @@ async function fetchJSON(url, { timeoutMs = 5000 } = {}) {
   // TODO: 実装者が書く
   // 実装ポイント：
   //  1) AbortController を生成し、setTimeout で timeoutMs 後に abort()
+  const controller = new AbortController();
   //  2) fetch(url, { signal }) を await で呼ぶ
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    if (!res.ok) throw new Error('HTTP ${res.status}');
+    return await res.json(); 
+  }finally {
+    clearTimeout(id);
+  }
   //  3) HTTP ステータスを判定し、200系以外は throw new Error('HTTP ' + res.status)
   //  4) res.json() を返す
   //  5) finally でタイマーを必ず clear する
@@ -26,8 +35,30 @@ async function postJSON(url, payload, { timeoutMs = 5000 } = {}) {
   //     - 適当な遅延（例：await new Promise(r => setTimeout(r, 800))）
   //     - payload.email に 'fail' が含まれる場合は throw new Error('サーバエラー…')
   //     - それ以外は { ok: true, message: '送信を受け付けました。' } を返す
-  //  2) それ以外の URL は通常の fetch で POST し、ステータス判定・タイムアウト処理を行う
+  if (url.endsWith('/api/contact')) {
+    await new Promise((r) => setTimeout(r, 800));
+    if (String(payload.email || '').includes('fail')) {
+      throw new Error('サーバエラー：送信できませんでした。');
+      }
+      return { ok: true, message: '送信を受け付けました。'};
+  }
+    //  2) それ以外の URL は通常の fetch で POST し、ステータス判定・タイムアウト処理を行う
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error('HTTP ${res.status}');
+    return await res.json();
+  } finally {
+    clearTimeout(id);
+  }
 }
+
 
 // ===== 状態管理（そのまま使用） =====
 const dom = {
@@ -106,6 +137,9 @@ async function openDetail(product) {
     //     例）const [reviews] = await Promise.all([ fetchJSON('./data/reviews.json') ]);
     //  2) product.id で reviews をフィルタリング
     //  3) $('.modal-body', dom.modalRoot).innerHTML = detailHTML(product, list) で描画
+    const [reviews] = await Promise.all([fetchJSON('./data/reviews.json')]);
+    const list = (reviews || []).filter((r) => r.productld === product.id);
+    $('.modal-body', dom.modalRoot).innerHTML = detailHTML(product, list);
   } catch (e) {
     $('.modal-body', dom.modalRoot).innerHTML = `<p class="notice-text">詳細の取得に失敗しました。</p>`;
   }
@@ -172,6 +206,7 @@ function escapeHTML(str='') {
 function handleContact() {
   dom.form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    show(dom.result);
     dom.result.textContent = '送信中…';
     const form = new FormData(dom.form);
     const payload = {
@@ -186,6 +221,9 @@ function handleContact() {
       //  1) postJSON('/api/contact', payload) を await
       //  2) 成功メッセージを表示し、フォームを reset()
       //  3) 例外時はキャッチしてユーザーに分かる文言で表示
+      const res = await postJSON('/api/contact', payload);
+      dom.result.textContent = res?.message || '送信しました。';
+      dom.form.reset();
     } catch (err) {
       dom.result.textContent = String(err?.message || '送信に失敗しました。');
     }
@@ -206,6 +244,8 @@ async function loadProducts() {
     // 実装ポイント：
     //  1) fetchJSON('./data/products.json') を await
     //  2) renderList(products) を呼ぶ
+    const products = await fetchJSON('./data/products.json');
+    renderList(products);
   } catch (e) {
     showError('データの取得に失敗しました（' + (e?.message || 'Unknown') + '）');
   }
